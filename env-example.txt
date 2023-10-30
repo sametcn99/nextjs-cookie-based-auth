@@ -1,0 +1,2 @@
+NEXT_PUBLIC_ADMIN_SECRET="admin123" //Your Secret Admin Key. 
+NEXT_PUBLIC_JWT_SECRET_KEY="randomkey123" //Random Secret Key.
