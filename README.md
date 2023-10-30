@@ -6,11 +6,10 @@ This project has been created to learn how to implement JSON Web Token (JWT) and
 
 To enable JWT and cookie-based authentication in this project, we use the following environment variables. You should set these environment variables in the `.env` file:
 
-- `NEXT_PUBLIC_ADMIN_SECRET`: A variable that contains the password used for admin login. This value is compared to create a JWT token and stored as a cookie.
+1. `NEXT_PUBLIC_ADMIN_SECRET`: A variable that contains the password used for admin login. This value is compared to create a JWT token and stored as a cookie.
 
-- `NEXT_PUBLIC_JWT_SECRET_KEY`: A secret key used to sign and verify JWT tokens. This key ensures the security of JWT tokens.
+2. `NEXT_PUBLIC_JWT_SECRET_KEY`: A secret key used to sign and verify JWT tokens. This key ensures the security of JWT tokens.
 
-Example `.env` file:
 
 3. To start the project, run the following commands; `npm i` and `npm run dev`:
 
