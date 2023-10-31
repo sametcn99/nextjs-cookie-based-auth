@@ -26,21 +26,3 @@ The purpose of this project is to learn the fundamental concepts of implementing
 If you wish to customize the project and add more features, you can refer to the official Next.js documentation and other resources related to JWT.
 
 ##
-
-## Unresolved Issue
-
-In our application, we are facing an issue where the redirection does not work correctly after logging in. When the password is entered correctly, a JWT token is successfully generated; however, the redirection process does not function as expected.
-
-### Issue Description
-
-- **Step 1:** Upon entering the correct password, a JWT token is generated successfully. This token is stored via browser cookies, and the login process is completed.
-
-- **Step 2:** However, when the redirection process is conducted using `NextResponse`, the user appears as if they haven't logged in on the redirected page. The page still contains authentication checks that require the user to log in.
-
-- **Step 3:** Surprisingly, when the user manually revisits the page, they appear as if they have logged in, and the auth process works correctly.
-
-
-### Seeking Help
-
-If you have any suggestions or proposed solutions to resolve this issue, please feel free to share them. Your assistance would be greatly appreciated and would help in resolving the problem.
-
