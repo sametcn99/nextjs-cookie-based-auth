@@ -5,23 +5,28 @@ import { useRouter } from 'next/navigation'
 import Messages from '../messages'
 
 const LoginForm = () => {
+    //  Import useState and useRouter
     const [password, setPassword] = useState('')
 
+    // Call useRouter to get the router object
     const router = useRouter()
 
+    // Create a function that will handle the form submit
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
+        // Send the password to the API route
         const res = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password }),
         })
 
+        // If the response is not ok, throw an error
         const json = await res.json()
-
         if (!res.ok) throw Error(json.message || 'Something happened')
 
+        // Redirect the user to the homepage
         router.push('/')
         router.refresh()
     }

@@ -36,7 +36,7 @@ export async function POST(request: Request) {
 
       // Redirect the user to the home page
       return NextResponse.json(`Correct pass`, {
-        // a 301 status is required to redirect from a POST to a GET route
+        // a 200 status is required to redirect from a POST to a GET route
         status: 200
       });
     } else {
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         `Could not authenticate user`,
         {
-          // a 301 status is required to redirect from a POST to a GET route
+          // a 200 status is required to redirect from a POST to a GET route
           status: 401,
         },
       );
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       `server error`,
       {
-        // a 301 status is required to redirect from a POST to a GET route
+        // a 500 status is required to redirect from a POST to a GET route
         status: 500,
       },
     );

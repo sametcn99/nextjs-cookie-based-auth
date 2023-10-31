@@ -7,8 +7,9 @@ export const revalidate = 0;
 
 export default async function LoginPage() {
 
+  // Check if the user is authenticated
   const user = await verifyAuth();
-
+  // If the user is authenticated, redirect them to the home page
   if (user) {
     redirect('/');
   }
