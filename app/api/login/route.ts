@@ -35,28 +35,28 @@ export async function POST(request: Request) {
       });
 
       // Redirect the user to the home page
-      return NextResponse.redirect(`${requestUrl.origin}`, {
+      return NextResponse.json(`Correct pass`, {
         // a 301 status is required to redirect from a POST to a GET route
-        status: 301,
+        status: 200
       });
     } else {
       // Redirect the user back to the login page if the password is incorrect
-      return NextResponse.redirect(
-        `${requestUrl.origin}/login?error=Could not authenticate user`,
+      return NextResponse.json(
+        `Could not authenticate user`,
         {
           // a 301 status is required to redirect from a POST to a GET route
-          status: 301,
+          status: 401,
         },
       );
     }
   } catch (error) {
     // Redirect the user back to the login page if there was an error
     console.error("Error:", error);
-    return NextResponse.redirect(
-      `${requestUrl.origin}/login?error=Could not authenticate user`,
+    return NextResponse.json(
+      `server error`,
       {
         // a 301 status is required to redirect from a POST to a GET route
-        status: 301,
+        status: 500,
       },
     );
   }
