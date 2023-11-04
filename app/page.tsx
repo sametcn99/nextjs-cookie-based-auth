@@ -8,16 +8,19 @@ export default async function Home() {
       <h1 className="text-4xl font-bold">Home Page</h1>
       {(await verifyAuth()) ? (
         <div className="flex flex-col gap-3 w-full text-center lowercase">
-          <p>You Are Logged.</p>
+          <p className="lowercase">Logged</p>
           <LogoutButton />
         </div>
       ) : (
-        <Link
-          href="/login"
-          className="p-1 w-full text-xl font-thin text-center uppercase rounded-md bg-slate-500"
-        >
-          Login
-        </Link>
+        <>
+          <p className="lowercase">Not logged</p>
+          <Link
+            href="/login"
+            className="p-1 w-full text-xl font-thin text-center uppercase rounded-md bg-slate-500"
+          >
+            Login
+          </Link>
+        </>
       )}
       <Link
         className="p-1 w-full text-xl font-thin text-center uppercase rounded-md bg-slate-500"
