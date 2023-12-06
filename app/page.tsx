@@ -36,9 +36,9 @@ export default async function Home() {
       >
         Check out Source from Github
       </a>
-      <span>
+      <h2>
         Admin Key In Demo: <span className="select-text">o8AKFDIlUQ</span>
-      </span>
+      </h2>
     </div>
   );
 }
