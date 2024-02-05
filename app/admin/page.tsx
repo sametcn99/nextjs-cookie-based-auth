@@ -1,4 +1,4 @@
-import verifyAuth from "@/app/libs/verify-auth";
+import verifyAuth from "@/lib/is-auth";
 import AdminComponent from "./components/admin-componnent";
 import { redirect } from "next/navigation";
 
